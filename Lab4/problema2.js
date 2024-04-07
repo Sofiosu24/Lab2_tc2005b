@@ -15,15 +15,15 @@ function askQuest() {
 function checkQuest() {
     let i_tiempo = new Date();
     let preguntar = askQuest();
-    let revisar = document.getElementById('resultado');
+    let respuesta = document.getElementById("resultado");
     let f_tiempo = new Date();
     let r_tiempo = (f_tiempo - i_tiempo) / 1000; 
 
-    if (parseInt(preguntar[1]) == preguntar[0]) {
-        document.write('<p>Respuesta correcta. Tiempo de respuesta: ' + r_tiempo + ' segundos.</p>');
+        if (parseInt(preguntar[1]) === preguntar[0]) {
+        respuesta.innerHTML = '<p>Respuesta correcta. Tiempo de respuesta: ' + r_tiempo + ' segundos.</p>';
     }
     else {
-        document.write('<p>Respuesta incorrecta. Tiempo de respuesta: ' + r_tiempo + ' segundos.</p>');
+        respuesta.innerHTML = '<p>Respuesta incorrecta. Tiempo de respuesta: ' + r_tiempo + ' segundos.</p>';
     }
 }
 
