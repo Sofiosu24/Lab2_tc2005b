@@ -7,18 +7,87 @@
     </head>
 
     <body>
-        <h1>Problemas del Laboratorio 4</h1> 
-        <script src="./problema1.js"></script>
+        <main>
+            <h1>Problemas del Laboratorio 4</h1> 
+            <script src="./problema1.js"></script>
 
-        <h2>Problema 2: Verificador de suma</h2>
-        <div id="resultado"></div>
-        <script src="./problema2.js"></script>
+            <h2>Problema 2: Verificador de suma</h2>
+            <div id="resultado"></div>
+            <script src="./problema2.js"></script>
 
-        <h2>Problema 3: Contador de Números</h2> 
-        <p>Ingrese un arreglo de números separados por comas:</p>
-        <input type="text" id="numEntrada">
-        <button onclick="counter()">Contar</button>
-        <div id="contador"></div>        
+            <h2>Problema 3: Contador de Números</h2> 
+            <p>Ingrese un arreglo de números separados por comas:</p>
+            <input type="text" id="numEntrada">
+            <button onclick="counter()">Contar</button>
+            <div id="contador"></div>  
+            
+            <h2>Problema 4: Promedios de arreglos</h2>
+            <button onclick="create_matrix()">Probar</button>
+            <div id="resultados"></div>
+            
+            <h2>Problema 5: Calculadora de inverso de números</h2>
+            <label for="numero">Ingrese un número:</label>
+            <input type="number" id="numero">
+            <button onclick="calcuReverse()">Calcular Inverso</button>
+            <p id="invertir"></p>
+
+            <h2>Problema 6: Torres de Hanoi</h2>
+            <label for="num-discos">Con cuántos discos quieres jugar?: </label>
+            <input type="number" id="num-discos">
+            <button onclick="solveHanoi()">Resolver</button>
+            <div id="obtener"></div>
+
+            <h3>Preguntas a responder</h3>
+            <ul>
+                <li><strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong></li>
+                <h4>Diferencias</h4>
+                <ol>
+                    <li>Interpretado vs. compilado: Java es un lenguaje compilado, el código fuente se compila en bytecode que se ejecuta en la máquina virtual Java (JVM). JavaScript, por otro lado, es un lenguaje interpretado que se ejecuta en un navegador web.</li>
+                    <li>Titularidad del lenguaje: El control de Java está en manos de Oracle. Javascript se basa en un estándar abierto y es gestionado por ECMAScript, una organización sin ánimo de lucro</li>
+                    <li>Tipado: Java es un lenguaje de programación de tipado estático, hay que indicar su tipo y este no podrá cambiarse a lo largo de la ejecución del programa. Por su parte, Javascript es un lenguaje de tipado dinámico que permite variar el tipo de dato de una variable las veces que se desee.</li>
+                </ol>
+                <h4>Similitudes</h4>
+                <ol>
+                    <li>Sintaxis básica: A pesar de sus diferencias semánticas y de ejecución, Java y JavaScript comparten algunas similitudes en la sintaxis básica.</li>
+                    <li>Plataformas multiplataforma: Tanto Java como JavaScript son utilizados en múltiples plataformas. Java es conocido por su lema "write once, run anywhere" (escribe una vez, ejecuta en cualquier lugar), mientras que JavaScript es compatible con todos los principales navegadores web y puede ser ejecutado en diversas plataformas a través de Node.js.</li>
+                </ol>
+                <li><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong></li>
+                <ul>
+                    <li>Date.now(): Devuelve el valor númerico correspondiente al actual número de milisegundos transcurridos desde el 1 de Enero de 1970.</li>
+                    <li>Date.parse(): Transforma la cadena que representa una fecha y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970.</li>
+                    <li>Date.UTC(): Acepta los mismos parámetros de la forma extendida del constructor (por ejemplo: del 2 al 7 ) y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970.</li>
+                    <li>Date.prototype.getDate(): Retorna el día del mes (1-31) para la fecha especificada acorde a la hora local.</li>
+                    <li>Date.prototype.getDay(): Retorna el día de la semana (0-6) para la fecha especificada acorde a la hora local.</li>
+                </ul>
+                <li><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong></li>
+                <ul>
+                    <li>push(): Añade un elemento  al final del arreglo</li>
+                    <li>pop(): Este elimina un elemento del final de un arreglo. Entonces este regresa con el elemento eliminado  y cambia el arreglo original.</li>
+                    <li>shift(): Eliminar un elemento desde el principio del arreglo y regresa el elemento eliminado y cambia el arreglo original. </li>
+                    <li>slice(): Puede copiar y clonar un arreglo a un nuevo arreglo usando el metodo</li>
+                    <li>Array.isArray(value): Regresa verdadero si el valor que pasa es un arreglo.</li>
+                </ul>
+                <li><strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong></li>
+                <p>
+                    En JavaScript se puede declarar una variable con alcance local dentro de una función utilizando la palabra clave var, let, o const, dependiendo de si se desea que la variable sea mutable o inmutable, y el alcance deseado.</p>
+                <li><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong></li>
+                <p>
+                    El uso de variables globales dentro de funciones puede tener implicaciones problemáticas. Las variables globales pueden dificultar la comprensión del código, especialmente en proyectos grandes o complejos y si no se gestionan adecuadamente, las variables globales pueden tener nombres que coincidan accidentalmente con variables locales dentro de una función, lo que puede llevar a comportamientos inesperados y errores difíciles de depurar.</p>
+            </ul>
+        </main>
+
+        <footer>
+            <h3>Referencias Bibliográficas</h3>
+            <ul>
+                <li>Unir, V. (2023, 14 junio). ¿Cuáles son las diferencias entre JAVA y JavaScript? Universidad Virtual. | UNIR Ecuador - Maestrías y Grados Virtuales. https://ecuador.unir.net/actualidad-unir/diferencias-java-javascript/#:~:text=Java%20es%20un%20lenguaje%20de,objetos%2C%20aunque%20s%C3%AD%20lo%20permite.</li>
+                <li>Date - JavaScript | MDN. (s.f.). MDN Web Docs. https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date</li>
+                <li>Zubikarai, S. (2022, 12 enero). Manual de arreglos en JavaScript: Métodos de arreglos de JS explicados con ejemplos. freeCodeCamp.org. https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/</li>
+                <li>OpenAI. (2024). ChatGPT (versión del 15 de julio) [Modelo de lenguaje de gran tamaño]. https://chat.openai.com/chat</li>
+            </ul>
+        </footer>
     </body>
     <script src="./problema3.js"></script> 
+    <script src="./problema4.js"></script>
+    <script src="./problema5.js"></script>
+    <script src="./problema6.js"></script>
 </html>
