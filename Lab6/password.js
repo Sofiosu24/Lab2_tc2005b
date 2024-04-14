@@ -4,6 +4,7 @@ const seguraPassword = document.getElementById('passwordSegura');
 const mostrarPassword = document.getElementById('mostrar');
 const passwordError = document.getElementById('errorPassword')
 const passwordForma = document.getElementById('formaPassword');
+const passwordLabel = document.getElementById('passwordLabel');
 
 passwordInput.addEventListener('input', () => {
     const password = passwordInput.value;
@@ -25,6 +26,20 @@ passwordForma.addEventListener('submit', (evento) => {
         evento.preventDefault();
         passwordError.textContent = "El Password no coincide. Intentalo de nuevo";
     }
+});
+
+/*Cambia el estilo de las letras de alguna parte del documento con eventos diferentes a onClick.
+
+Cuando el campo de contraseña obtiene el foco, el color del texto del título "Password" cambiará a azul. 
+Cuando el campo de contraseña pierde el foco, el color volverá a su valor original.  */
+passwordInput.addEventListener('focus', () => {
+    passwordLabel.classList.add('focused-label');
+    seguraPassword.textContent = "Usa una combinación de letras mayúsculas y minúsculas, números y caracteres especiales (!@#$%^&*()).";
+});
+
+passwordInput.addEventListener('blur', () => {
+    passwordLabel.classList.remove('focused-label');
+    seguraPassword.textContent = ""; 
 });
 
 function calcuPassword(password) {

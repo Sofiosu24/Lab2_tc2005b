@@ -1,0 +1,55 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(240, 202, 239);
+}
+
+h1 {
+    color: rgb(129, 25, 141);
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: rgb(178, 13, 197);
+    display: flex;
+    justify-content: start;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.producto {
+    margin-bottom: 20px;
+}
+
+.producto label {
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 5px;
+    background-color: rgb(187, 190, 255);
+    border: 0;
+    outline: none;
+}
+
+#total {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    color:rgb(158, 112, 201);
+}
+
+li {
+    font-weight: bold;
+    color: black;
+}
+p {
+    text-align: justify;
+}
