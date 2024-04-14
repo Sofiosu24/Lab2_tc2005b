@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="venta_productos.css">
+    <title>Venta de productos</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>eCommerce de moda</h1>
+        <div class="producto">
+            <label for="pantalon">Pantalones acampanados unicolor: $216.00 por unidad</label>
+            <input type="number" id="pantalon" min="0" value="0">                
+        </div>
+       <div class="producto">
+            <label for="camisa">Camisa casual de Manga Larga: $265.00 por unidad</label>
+            <input type="number" id="camisa" min="0" value="0">                
+        </div>
+        <div class="producto">
+            <label for="vestido">Vestido camisero con abertura largo: $513.00 por unidad</label>
+            <input type="number" id="vestido" min="0" value="0">                
+        </div>
+        <div id="sub_original">Subtotal original: $0.00</div>
+        <div id="rebaja">Descuento: $0.00</div>
+        <div id="subtotal">Subtotal: $0.00</div>
+        <div id="iva">IVA: $0.00</div>
+        <div id="total">Total: $0.00 </div>
+
+        <h1>Preguntas a responder</h1>
+        <ul>
+            <li>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </li>
+            <p>La validación en el lado del cliente permite proporcionar retroalimentación instantánea al usuario sobre los errores que pueda cometer al completar el formulario. 
+                Puede reducir la carga en el servidor ya que este no necesita procesar y validar datos potencialmente incorrectos, y puede proporcionar una capa adicional de seguridad 
+                al formulario, al evitar que se envíen datos maliciosos o incorrectos al servidor.</p>
+            <li>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
+            <p>La forma más simple de evitar las validaciones de JavaScript es desactivar JavaScript en el navegador. También puede que un usuario malintencionado podría intentar
+                 modificar el código JavaScript de la página para evitar la ejecución de las validaciones. En el peor de los casos es que el usuario tenga conocimeintos  técnicos 
+                 sabe cómo funcionan las validaciones del lado del cliente, podría intentar enviar datos directamente al servidor sin pasar por esas validaciones.</p>
+            <li>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</li>
+            <p>Si bien las validaciones en el lado del cliente con JavaScript son una buena práctica para mejorar la experiencia del usuario y reducir la carga del servidor, 
+                no deben considerarse como una medida de seguridad completa por sí solas. Es importante implementar validaciones en el lado del servidor para garantizar la seguridad 
+                y la integridad de los datos.</p>
+        </ul>
+        <h2>Lista de enlaces</h2>
+        <ul>
+           <li><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+           <li><a href="https://www.arsys.es/blog/campos-input-texto-css">https://www.arsys.es/blog/campos-input-texto-css</a></li>
+           <li><a href="https://fonts.google.com/selection/embed">https://fonts.google.com/selection/embed</a></li>
+           <li><a href="https://chat.openai.com/share/382a867f-3ed1-4fa0-9ba1-efa1172a8c38">https://chat.openai.com/share/382a867f-3ed1-4fa0-9ba1-efa1172a8c38</a></li>
+        </ul>
+    </div>
+    <script src="venta_productos.js"></script>
+</body>
+</html>
