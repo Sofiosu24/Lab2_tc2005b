@@ -1,0 +1,1 @@
+El ejercicio 2 trata de crear una función que reciba un string y escriba el string en un archivo de texto. 

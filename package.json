@@ -1,0 +1,21 @@
+{
+  "name": "lab2_tc2005b",
+  "version": "1.0.0",
+  "description": "Este repositorio es para realizar los Laobatorios individuales que hay de Construcción de software y toma de decisiones",
+  "main": "server.js",
+  "scripts": {
+    "start": "Node Lab8/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sofiosu24/Lab2_tc2005b/"
+  },
+  "keywords": [],
+  "author": "Sofia Osu",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
