@@ -12,26 +12,8 @@ const server = http.createServer((request, response) => {
         case "/formulario":
             if (request.method === "GET") {
                 response.setHeader('Content-Type', 'text/html');
-                response.write(`
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Formulario de Ejemplo</title>
-                    </head>
-                    <body>
-                        <h1>Formulario de Ejemplo</h1>
-                        <form action="/formulario" method="post">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required><br>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required><br>
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </body>
-                    </html>
-                `);
+                const html = fs.readFileSync(path.resolve(__dirname, './form.html'), 'utf8')
+                response.write(html);
                 response.end();
             } else if (request.method === "POST") {
                 let body = [];
