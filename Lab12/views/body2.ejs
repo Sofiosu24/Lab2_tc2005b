@@ -1,0 +1,19 @@
+<h1>Enlistar Novelas...</h1>
+
+<div class="contenedor">
+  <img src="libro.jpg" alt="Imagen 1" height="220" width="380">
+</div>
+
+<p>Las novelas propuestas son:</p>
+
+<%
+    for(var i = 0; i < novela.length; i++){
+%>
+        <p><%= novela[i] %></p>
+<% 
+    }
+%>
+
+<footer>
+    <p>This is a footer</p>
+</footer>
