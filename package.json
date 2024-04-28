@@ -4,18 +4,27 @@
   "description": "Este repositorio es para realizar los Laobatorios individuales que hay de Construcción de software y toma de decisiones",
   "main": "server.js",
   "scripts": {
-    "start": "Node Lab8/app.js",
+    "start": "nodemon Lab11/index_2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sofiosu24/Lab2_tc2005b/"
+    "url": "git+https://github.com/Sofiosu24/Lab2_tc2005b.git"
   },
   "keywords": [],
   "author": "Sofia Osu",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "uuid": "^9.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/Sofiosu24/Lab2_tc2005b/issues"
+  },
+  "homepage": "https://github.com/Sofiosu24/Lab2_tc2005b#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
