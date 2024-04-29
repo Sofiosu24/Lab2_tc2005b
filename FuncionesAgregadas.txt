@@ -1,0 +1,24 @@
+SELECT SUM(sueldo) AS "Ingreso Total del Actor"
+FROM Elenco
+GROUP BY nombre;
+
+SELECT SUM(presupuesto) AS "Monto Total por Película"
+FROM Película 
+WHERE año > "12/12/1979" AND año < "01/01/1990"
+GROUP by nomEstudio;
+
+SELECT nombre, AVG(sueldo) AS "Sueldo promedio de actores"
+FROM Elenco e JOIN Actor a 
+     ON e.nombre = a.nombre
+WHERE a.sexo = "hombre"
+GROUP BY a.nombre
+HAVING AVG(sueldo) > 5000000;
+
+SELECT DISTINCT título, año, presupuesto	
+FROM Película	
+ORDER BY presupuesto DESC;
+
+SELECT MAX(sueldo) AS "Actriz mejor pagada"
+FROM Elenco e JOIN Actor a 
+     ON e.nombre = a.nombre 
+WHERE a.sexo = "mujer";
