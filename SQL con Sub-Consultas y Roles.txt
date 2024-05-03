@@ -1,0 +1,44 @@
+Película(título, año, duración, encolor, presupuesto, nomestudio, idproductor)
+Elenco(título, año, nombre, sueldo)
+Actor(nombre, dirección, telefono, fechanacimiento, sexo)
+Productor(idproductor, nombre, dirección, teléfono)
+Estudio(nomestudio, dirección)
+
+1.- Actrices de “Las brujas de Salem”.
+SELECT nombre
+FROM Actor
+WHERE sexo = "mujer" AND título = (SELECT título
+                		   FROM Elenco
+		  		   WHERE título = “Las brujas de Salem”)
+
+2.- Nombres de los actores que aparecen en películas producidas por MGM en 1995.
+SELECT nombre
+FROM Elenco e JOIN Película p e.año = p.año
+	      JOIN Estudio s p.nomestudio = s.nomestudio
+WHERE s.nomestudio = "MGM" AND p.año = 1995
+
+3.- Películas que duran más que “Lo que el viento se llevó” (de 1939).
+SELECT título
+FROM Película
+WHERE duracion > (SELECT duracion
+		  FROM Película 
+		  WHERE título = “Lo que el viento se llevó” AND año = 1939)
+
+4.- Productores que han hecho más películas que George Lucas.
+SELECT nombre
+FROM Productor r JOIN Película p r.idproductor = p.idproductor
+HAVING COUNT(r.idproductor) > (SELECT COUNT(o.idproductor)
+			       FROM Productor r JOIN Película p o.idproductor = p.idproductor
+			       WHERE nombre = "George Lucas")
+
+5.- Nombres de los productores de las películas en las que ha aparecido Sharon Stone.
+SELECT nombre
+FROM Productor r JOIN Película p r.idproductor = p.idproductor
+WHERE título IN (SELECT título
+		 FROM Elenco
+		 WHERE nombre = "Sharon Stone")
+
+6.- Título de las películas que han sido filmadas más de una vez
+SELECT título
+FROM Película
+HAVING COUNT(título) > 1
