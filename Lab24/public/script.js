@@ -26,7 +26,15 @@ window.addEventListener('load', function() {
     });
 
     gridTable = new gridjs.Grid({
-        columns: ["Id", "Name", "Price"],
+        columns: ["Id", "Name", "Price", {
+            name: "Actions",
+          formatter: (_, row) => {
+            return gridjs.h('button', {
+                className: ' btn btn-link',
+                onClick: () => alert(`Editing "${row.cells[0].data}" "${row.cells[1].data}"`)
+              }, 'Edit');
+          }
+        }],
         pagination: true,
         search: true,
         sort: true,
